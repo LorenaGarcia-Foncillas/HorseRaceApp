@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoEDP.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cpv-aa-kZn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="560"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cpv-aa-kZn" secondAttribute="height" multiplier="207:280" id="tav-IB-fmZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HORSE RACE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xez-wv-Mwm">
+                                <rect key="frame" x="52.666666666666657" y="676" width="309" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="cpv-aa-kZn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Npt-0d-bFQ"/>
+                            <constraint firstItem="Xez-wv-Mwm" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="O8Z-AJ-yr1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xez-wv-Mwm" secondAttribute="bottom" id="Tza-U7-l4E"/>
+                            <constraint firstItem="cpv-aa-kZn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bkp-Mi-3HB"/>
+                            <constraint firstItem="cpv-aa-kZn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="exq-QI-s3w"/>
+                            <constraint firstItem="cpv-aa-kZn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="tj0-fN-POf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LogoEDP.jpg" width="1024" height="1024"/>
+    </resources>
+</document>
