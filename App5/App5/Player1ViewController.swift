@@ -56,12 +56,17 @@ class Player1ViewController: UIViewController {
     var DispatchBool1: Bool = false
     var DispatchBool2: Bool = true
     
+    //VARIABLES SECONFLAP FUNCTION
+    var lap2: Bool = false
+    var clock = Timer()
+    var timing = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         Speed()
     }
     
-    //FUNCTION: CREATE POST REQUEST EVERY 2 SECS
+    //FUNCTION: CREATE GET REQUEST (in the context of the game it acts as a POST request)
     func PostRequest(on: Bool){
         timer4 = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) {_ in
            
@@ -114,6 +119,8 @@ class Player1ViewController: UIViewController {
                             }
                             else if self.Player1 == "br>Player1:1"{
                                 print("lap 2")
+                                self.lap2 = true
+                                self.SecondLap(on: self.lap2)
                                 self.TimerFunc = false
                                 self.timer2.invalidate()
                                 self.check = false
@@ -250,13 +257,31 @@ class Player1ViewController: UIViewController {
         Reset(sender: GoBack)
     }
     
+    // FUNC: CHANGE COLOR OF BOTH BUTTONS DURING LAP 2
+    func SecondLap (on: Bool){
+        clock = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {[weak self] (_) in
+            guard let timepassing = self else {return}
+            timepassing.timing += 1
+            if self!.timing % 2 == 0 {
+                self?.Left_button.backgroundColor = UIColor.green
+                self?.Right_button.backgroundColor = UIColor.green
+            }
+            else {
+                self?.Left_button.backgroundColor = UIColor.red
+                self?.Right_button.backgroundColor = UIColor.red
+            }
+        })
+    }
+    
     //FUNCTION: RESET VARIABLES, GO BACK TO MAIN MENU
     func Reset(sender: UIButton) {
         State = 0
         timer1.invalidate()
         timer3.invalidate()
         timer4.invalidate()
+        clock.invalidate()
         TimerOn3 = false
+        lap2 = false
         Duration3 = 0
         counter = 0
         DispatchBool1 = false
